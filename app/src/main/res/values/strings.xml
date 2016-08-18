@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">HotelProject</string>
+    <string name="no_room">찾으시는 호텔이 없거나 SOLD OUT 이신가요?</string>
+    <string name="project_name">HOTEL TIME</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navi_columns_meet">님 만나서 반갑습니다.</string>
+    <string name="navi_columns_point">포인트</string>
+    <string name="navi_columns_reservation">예약내역</string>
+    <string name="navi_columns_sale">할인권</string>
+    <string name="navi_columns_select">찜목록</string>
+    <string name="navi_columns_news">호텔타임 소식</string>
+    <string name="navi_columns_event">진행중인 이벤트</string>
+    <string name="navi_columns_friend">친구에게 할인권 보내기</string>
+    <string name="navi_columns_more">더보기</string>
+    <string name="navi_columns_service_center">호텔타임 고객센터</string>
+    <string name="navi_columns_num">1577-5770</string>
+    <string name="navi_columns_content">오전9시~새벽3시 (점심시간 : 오후12시~오후1시)</string>
+</resources>
