@@ -17,7 +17,7 @@ public class GyeongjuViewHolder extends RecyclerView.ViewHolder {
 
     public GyeongjuViewHolder(View itemView) {
         super(itemView);
-        kindView = (TextView)itemView.findViewById(R.id.hetel_kind);
+        kindView = (TextView)itemView.findViewById(R.id.hotel_kind);
         imageView = (ImageView) itemView.findViewById(R.id.hotel_img);
         nameView = (TextView) itemView.findViewById(R.id.hotel_name);
         timeView = (TextView) itemView.findViewById(R.id.hetel_time);
@@ -31,10 +31,10 @@ public class GyeongjuViewHolder extends RecyclerView.ViewHolder {
         this.gyeongju = gyeongju;
         if (gyeongju.hotelKind == 0){
             kindView.setText("특급");
-            kindView.setBackgroundResource(R.drawable.kind_special);
+            kindView.setBackgroundResource(R.drawable.text_bg_kind_special);
         }else if (gyeongju.hotelKind == 1){
             kindView.setText("럭셔리");
-            kindView.setBackgroundResource(R.drawable.kind_luxury);
+            kindView.setBackgroundResource(R.drawable.text_bg_kind_luxury);
         }else{
             kindView.setText("1급");
         }

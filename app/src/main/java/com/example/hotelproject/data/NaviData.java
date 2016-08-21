@@ -10,5 +10,5 @@ public class NaviData {
     public String username;
     public int point = 0;
     public int reservation = 0;
-    public List<String> list = new ArrayList<>();
+    public List<NaviList> list = new ArrayList<>();
 }

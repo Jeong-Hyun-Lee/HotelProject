@@ -24,4 +24,52 @@
     <string name="navi_columns_service_center">호텔타임 고객센터</string>
     <string name="navi_columns_num">1577-5770</string>
     <string name="navi_columns_content">오전9시~새벽3시 (점심시간 : 오후12시~오후1시)</string>
+    <string name="check_in">체크인 시 배정</string>
+    <string name="address">주소</string>
+    <string name="no_smoking">전객실 금연</string>
+    <string name="fitness_center">헬스장</string>
+    <string name="cafe">카페</string>
+    <string name="golf_zone">골프장</string>
+    <string name="sub_bottom_content">더 궁금하신 사항이 있으신가요?</string>
+    <string name="sub_recomm_title">추천이유</string>
+    <string name="sub_icon_title">호텔정보</string>
+    <string name="sub_basic_title">기본사항</string>
+    <string name="sub_benefits_title">투숙객 혜택</string>
+    <string name="sub_facility_title">부대시설</string>
+    <string name="sub_info_title">현장 추가 정보</string>
+    <string name="sub_breakfast_title">조식정보</string>
+    <string name="sub_cancel_title">취소 및 환불 규정</string>
+    <string name="sub_confirm_title">확인사항 및 기타</string>
+
+
+
+
+    <string name="input_name">경주 코모도 호텔</string>
+    <string name="input_recomm_content">신라 천년이 숨쉬는 경주의 첫 특급 호텔로 최상의 서비스를 제공합니다.</string>
+    <string name="input_recomm_content2">경주 보문단지 중심에 위치해 단지내 도보로 이동이 가능하고 경주세계문화엑스포공원, 첨성대, 불국사 등 경주 주요 관광지로의 접근성이 뛰어납니다.</string>
+    <string name="input_address">경북 경주시 신평동 410-2</string>
+
+    <string name="input_list_content">체크인 : 14:00 | 체크아웃 : 12:00</string>
+    <string name="input_list_content2">무료 Wi-Fi</string>
+    <string name="input_list_content3">전 객실 금연</string>
+    <string name="input_list_content4">Bath Amenity</string>
+    <string name="input_list_content5">주차가능</string>
+
+    <string name="input_list_content6">무료 주차 (객실 당 1대)</string>
+
+    <string name="input_list_content7">레스토랑, 로비라운지, 비즈니스센터, 사우나, 수영자, 편의점, 노래연습장, 연회장장</string>
+
+    <string name="input_list_content8">전 객실 인원추가 불가</string>
+
+    <string name="input_list_content9">아리랑 / 1층 / 06:30~09:30</string>
+    <string name="input_list_content10">1인 : 16,930원 (성인), 13,310원 (아동) 현장결제</string>
+
+    <string name="input_list_content11">체크인 기준 3일전 17시 까지 : 100%환불</string>
+    <string name="input_list_content12">체크인 기준 3일전 17시~당일 : 0%환불</string>
+
+    <string name="input_list_content13">최대인원 초과시 입실 불가합니다.</string>
+    <string name="input_list_content14">위의 정보는 호텔의 사정에 따라 변경될 수 있습니다.</string>
+    <string name="input_list_content15">해당 이미지는 실제와 상이 할 수 있습니다.</string>
+    <string name="input_list_content16">체크인 시 배정 또는 베드타입 미기재 상품은 특정객실과 베드타입을 보장하지 않습니다.</string>
+    <string name="input_list_content17">해당 객실가는 세금, 봉사료가 포함된 금액입니다.</string>
 </resources>

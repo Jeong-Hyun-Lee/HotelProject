@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsActivity">
+        <activity android:name=".NewsActivity"></activity>
+        <activity android:name=".SubHotelActivity"
+            android:exported="true">
 
         </activity>
     </application>

@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hotelproject.HotelData;
+import com.example.hotelproject.data.HotelData;
 import com.example.hotelproject.R;
 import com.example.hotelproject.viewholder.GyeongjuViewHolder;
 import com.example.hotelproject.viewholder.RemainViewHolder;
@@ -75,12 +75,18 @@ public class HotelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 return holder;
             }
             case VIEW_SEOUL:{
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_hetel,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_hotel,parent,false);
                 SeoulViewHolder holder = new SeoulViewHolder(view);
+                holder.setOnClickListListener(new SeoulViewHolder.OnClickListListener() {
+                    @Override
+                    public void onClickHotelListener(int position) {
+                        mListener.onClickColumnsListener(position);
+                    }
+                });
                 return holder;
             }
             case VIEW_GYEONGJU:{
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_hetel,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_hotel,parent,false);
                 GyeongjuViewHolder holder = new GyeongjuViewHolder(view);
                 return holder;
             }
@@ -143,5 +149,13 @@ public class HotelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
         count++;
         return count;
+    }
+
+    public interface OnClickListColumnsListener{
+        public void onClickColumnsListener(int position);
+    }
+    OnClickListColumnsListener mListener;
+    public void setOnClickColumnsListener(OnClickListColumnsListener mListener){
+        this.mListener = mListener;
     }
 }

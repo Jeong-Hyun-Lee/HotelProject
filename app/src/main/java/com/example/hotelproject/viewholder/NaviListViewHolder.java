@@ -18,25 +18,26 @@ public class NaviListViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.onListClick(getAdapterPosition());
+                if (mListener != null){
+                   int i= getAdapterPosition();
+                    mListener.onListClick(view,getAdapterPosition());
+                }
             }
         });
         columns = (TextView)itemView.findViewById(R.id.navigation_columns);
-//        r = (RelativeLayout) itemView.findViewById(R.id.navi_list_columns);
     }
 
     public void setColumns(String c){
         columns.setText(c);
     }
 
-//    RelativeLayout r;
 
-    public interface OnNaviListListener{
-        void onListClick(int position);
+    public interface OnNaviItemClickListener {
+        void onListClick(View view,int position);
     }
 
-    OnNaviListListener mListener;
-    public void setOnClickNaviListListener(OnNaviListListener mListener){
+    OnNaviItemClickListener mListener;
+    public void setOnClickNaviListListener(OnNaviItemClickListener mListener){
         this.mListener = mListener;
     }
 }

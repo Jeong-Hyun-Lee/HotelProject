@@ -1,4 +1,4 @@
-package com.example.hotelproject;
+package com.example.hotelproject.data;
 
 import com.example.hotelproject.data.Gyeongju;
 import com.example.hotelproject.data.Seoul;

@@ -14,7 +14,7 @@ import com.example.hotelproject.viewholder.NaviListViewHolder;
 /**
  * Created by 이정현 on 2016-08-17.
  */
-public class NaviAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements NaviListViewHolder.OnNaviListListener{
+public class NaviAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     NaviData data;
 
@@ -61,7 +61,12 @@ public class NaviAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             case VIEW_TYPE_LIST: {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_navigation_columns, parent, false);
                 NaviListViewHolder holder = new NaviListViewHolder(view);
-                holder.setOnClickNaviListListener(this);
+                holder.setOnClickNaviListListener(new NaviListViewHolder.OnNaviItemClickListener() {
+                    @Override
+                    public void onListClick(View view, int position) {
+                        mListener.onClickNavi(view,position,data.list.get(position-1).menuId);
+                    }
+                });
                 return holder;
             }
 
@@ -85,7 +90,7 @@ public class NaviAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         if (data.list.size() > 0) {
             if (data.list.size() > position) {
                 NaviListViewHolder lvh = (NaviListViewHolder) holder;
-                lvh.setColumns(data.list.get(position));
+                lvh.setColumns(data.list.get(position).listName);
                 return;
             }
             position -= data.list.size();
@@ -113,13 +118,8 @@ public class NaviAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     }
 
 
-    @Override
-    public void onListClick(int position) {
-        mListener.onClickNavi(position);
-    }
-
     public interface OnNaviClickListener{
-        void onClickNavi(int position);
+        void onClickNavi(View view,int position,int menuId);
     }
 
     OnNaviClickListener mListener;

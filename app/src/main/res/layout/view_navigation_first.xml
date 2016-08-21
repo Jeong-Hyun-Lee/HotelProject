@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:text="Large Text"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white" />
+                android:textColor="@color/color_white" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -71,7 +71,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/navi_columns_meet"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white" />
+                android:textColor="@color/color_white" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         app:columnCount="2"
         app:orientation="horizontal"
-        android:background="@color/white_dark"
+        android:background="@color/color_white_dark"
         >
 
         <RelativeLayout

@@ -78,6 +78,7 @@ public class NewsActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_backspace_white_36dp);
+        getSupportActionBar().setTitle(null);
         mAdapter = new NewsAdapter(newsList);
         listView = (ExpandableListView) findViewById(R.id.news_list);
         listView.setAdapter(mAdapter);

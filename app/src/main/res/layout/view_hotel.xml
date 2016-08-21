@@ -56,7 +56,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
             android:id="@+id/hetel_price"
-            android:textColor="@color/white"
+            android:textColor="@color/color_white"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
@@ -70,7 +70,7 @@
             android:layout_above="@+id/linearLayout"
             android:layout_alignLeft="@+id/linearLayout"
             android:layout_alignStart="@+id/linearLayout"
-            android:textColor="@color/white"
+            android:textColor="@color/color_white"
             />
 
         <RelativeLayout
@@ -86,10 +86,10 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Small Text"
-                android:id="@+id/hetel_kind"
+                android:id="@+id/hotel_kind"
                 android:layout_gravity="center_vertical"
-                android:textColor="@color/white"
-                android:background="@drawable/remain_string_bg"/>
+                android:textColor="@color/color_white"
+                android:background="@drawable/text_bg_remain"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,11 +97,11 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Small Text"
                 android:id="@+id/hotel_remain"
-                android:textColor="@color/white"
+                android:textColor="@color/color_white"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/remain_string_bg"/>
+                android:background="@drawable/text_bg_remain"/>
         </RelativeLayout>
 
     </RelativeLayout>

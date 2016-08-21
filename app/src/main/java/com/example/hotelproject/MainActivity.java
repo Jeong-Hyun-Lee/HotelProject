@@ -1,5 +1,6 @@
 package com.example.hotelproject;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,9 +20,10 @@ import android.view.MenuItem;
 
 import com.example.hotelproject.adapter.HotelAdapter;
 import com.example.hotelproject.data.Gyeongju;
+import com.example.hotelproject.data.HotelData;
 import com.example.hotelproject.data.Seoul;
 
-public class MainActivity extends AppCompatActivity implements NaviFragment.OnMenuSelectListener {
+public class MainActivity extends AppCompatActivity implements NaviFragment.OnMenuSelectListener,HotelAdapter.OnClickListColumnsListener {
 
     RecyclerView listView;
     HotelAdapter mAdapter;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements NaviFragment.OnMe
     String statename;
     DrawerLayout drawer;
     SwipeRefreshLayout refreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements NaviFragment.OnMe
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btn_fab);
 
         mAdapter = new HotelAdapter();
+        mAdapter.setOnClickColumnsListener(this);
+
         listView = (RecyclerView) findViewById(R.id.rv_list);
         listView.setAdapter(mAdapter);
         listView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
@@ -175,8 +180,28 @@ public class MainActivity extends AppCompatActivity implements NaviFragment.OnMe
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
     public void onMenuSelected(int menuId) {
+        switch (menuId){
+            case NaviFragment.COLUMNS_NOTICE:{
+                Intent i = new Intent(this,NewsActivity.class);
+                startActivity(i);
+                break;
+            }
+            case NaviFragment.COLUMNS_EVENT:
+                break;
+            case NaviFragment.COLUMNS_FRIEND:
+                break;
+            case NaviFragment.COLUMNS_MORE:
+                break;
+            default:
+                return;
+        }
+//        drawer.closeDrawer(GravityCompat.START);
+    }
 
+    @Override
+    public void onClickColumnsListener(int position) {
+        Intent intent = new Intent(this, SubHotelActivity.class);
+        startActivity(intent);
     }
 }

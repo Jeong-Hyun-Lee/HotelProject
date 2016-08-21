@@ -17,7 +17,16 @@ public class SeoulViewHolder extends RecyclerView.ViewHolder{
 
     public SeoulViewHolder(View itemView) {
         super(itemView);
-        kindView = (TextView) itemView.findViewById(R.id.hetel_kind);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null){
+                    int i= getAdapterPosition();
+                    mListener.onClickHotelListener(i);
+                }
+            }
+        });
+        kindView = (TextView) itemView.findViewById(R.id.hotel_kind);
         imageView = (ImageView) itemView.findViewById(R.id.hotel_img);
         nameView = (TextView) itemView.findViewById(R.id.hotel_name);
         timeView = (TextView) itemView.findViewById(R.id.hetel_time);
@@ -30,10 +39,10 @@ public class SeoulViewHolder extends RecyclerView.ViewHolder{
         this.seoul = seoul;
         if (seoul.hotelKind == 0){
             kindView.setText("특급");
-            kindView.setBackgroundResource(R.drawable.kind_special);
+            kindView.setBackgroundResource(R.drawable.text_bg_kind_special);
         }else if (seoul.hotelKind == 1){
             kindView.setText("럭셔리");
-            kindView.setBackgroundResource(R.drawable.kind_luxury);
+            kindView.setBackgroundResource(R.drawable.text_bg_kind_luxury);
         }else{
             kindView.setText("1급");
         }
@@ -43,5 +52,14 @@ public class SeoulViewHolder extends RecyclerView.ViewHolder{
         locationView.setText(seoul.stateName);
         priceView.setText(seoul.price);
         remainRoomView.setText(seoul.remainRoom);
+    }
+
+    public interface OnClickListListener{
+        public void onClickHotelListener(int position);
+    }
+
+    OnClickListListener mListener;
+    public void setOnClickListListener(OnClickListListener mListener){
+        this.mListener = mListener;
     }
 }
