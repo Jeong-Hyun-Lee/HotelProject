@@ -51,6 +51,7 @@
             android:layout_height="@dimen/btn_height"
             android:background="@drawable/sub_btn_selector"
             android:textColor="@color/color_white"
-            android:textSize="@dimen/text_large"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+           />
     </RelativeLayout>
 </LinearLayout>
